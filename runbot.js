@@ -1,6 +1,6 @@
 var Discord = require("discord.js")
 var request = require("request")
-var mybot = new Discord.Client()
+var bot = new Discord.Client()
 
 var truths = "API for Truths";
 var dares = "API FOR Dares";
@@ -12,6 +12,7 @@ var help = "Truth and Dare is a popular game. How it's played is a player asks a
 bot.on("ready", function(msg){
   console.log("Woop! Bot logged in under the name of "+bot.user.name+" and the user ID of "+bot.user.id)
 })
+
 bot.on("message", function(msg) {
   // if message starts with "something"
   if(msg.content.indexOf("<@CLIENTID> Truth") == 0){
