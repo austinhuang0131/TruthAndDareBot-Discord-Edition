@@ -1,5 +1,6 @@
-var Discord = require("discord.js");
+var Discord = require("discord.js")
 var request = require("request")
+var mybot = new Discord.Client()
 
 var truths = "API for Truths";
 var dares = "API FOR Dares";
@@ -8,11 +9,12 @@ var join = "To join press this url https://discordapp.com/oauth2/authorize?&clie
 var help = "Truth and Dare is a popular game. How it's played is a player asks a Truth or a dare and gets from another person. To play it on the server call the bot with it's username and Truth next to it for Truth and Dare for a dare."
 
 
-var mybot = new Discord.Client();
-
-mybot.on("message", function(message) {
+bot.on("ready", function(msg){
+  console.log("Woop! Bot logged in under the name of "+bot.user.name+" and the user ID of "+bot.user.id)
+})
+bot.on("message", function(msg) {
   // if message starts with "something"
-  if(message.content.indexOf("<@CLIENTID> Truth") == 0){
+  if(msg.content.indexOf("<@CLIENTID> Truth") == 0){
     console.log("called");
     request(truths, function (error, response, body) {
       // Check for no error and a 200 okay response
@@ -20,13 +22,8 @@ mybot.on("message", function(message) {
         console.log(body); // Show the HTML for the Google homepage.
         // Try to parse the json. If it errors it gets caught.
         var truthjson = JSON.parse(body);
-        try {
-        } catch (e) {
-          console.error(e);
-          return;
-        }
         var randomtruth = truthjson[0]['Truth'];
-        mybot.reply(message, randomtruth);
+        bot.reply(msg, randomtruth);
       } else {
         console.error(error);
         console.log(response);
@@ -34,12 +31,8 @@ mybot.on("message", function(message) {
     });
     console.log("Replied");
   }
-});
 
-
-mybot.on("message", function(message) {
-
-if(message.content.indexOf("<@CLIENTID> Dare") == 0){
+if(msg.content.indexOf("<@CLIENTID> Dare") == 0){
   console.log("called");
   request(dares, function (error, response, body) {
     // Check for no error and a 200 okay response
@@ -47,13 +40,8 @@ if(message.content.indexOf("<@CLIENTID> Dare") == 0){
       console.log(body); // Show the HTML for the Google homepage.
       // Try to parse the json. If it errors it gets caught.
       var darejson = JSON.parse(body);
-      try {
-      } catch (e) {
-        console.error(e);
-        return;
-      }
       var randomdare = darejson[0]['Dare'];
-      mybot.reply(message, randomdare);
+      bot.reply(msg, randomdare);
     } else {
       console.error(error);
       console.log(response);
@@ -61,26 +49,14 @@ if(message.content.indexOf("<@CLIENTID> Dare") == 0){
   });
   console.log("Replied");
 }
-});
+if(msg.content.indexOf("<@CLIENTID> Join") == 0) {
+        bot.reply(msg, join);
+}
 
-mybot.on("message", function(message) {
-
-
-
-mybot.on("message", function(message) {
-if(message.content.indexOf("<@CLIENTID> Join") == 0) {
-        mybot.reply(message, join);
-    }
-});
-
-
-mybot.on("message", function(message) {
 if(message.content.indexOf("<@CLIENTID> Help") == 0) {
-        mybot.reply(message, help);
-    }
-});
+        bot.reply(message, help);
+}
 
-// Always use the error callback.
 mybot.loginWithToken("*TOKEN*", function(error) {
   if (error) {
     console.error(error);
