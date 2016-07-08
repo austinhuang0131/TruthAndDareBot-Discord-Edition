@@ -15,7 +15,8 @@ bot.on("ready", function(msg){
 
 bot.on("message", function(msg) {
   // if message starts with "something"
-  if(msg.content.indexOf("<@CLIENTID> Truth") == 0){
+  msg.content = msg.content.toLowerCase()
+  if(msg.content.indexOf("<@CLIENTID> truth") == 0){
     console.log("called");
     request(truths, function (error, response, body) {
       // Check for no error and a 200 okay response
@@ -33,7 +34,7 @@ bot.on("message", function(msg) {
     console.log("Replied");
   }
 
-if(msg.content.indexOf("<@CLIENTID> Dare") == 0){
+if(msg.content.indexOf("<@CLIENTID> dare") == 0){
   console.log("called");
   request(dares, function (error, response, body) {
     // Check for no error and a 200 okay response
@@ -50,11 +51,11 @@ if(msg.content.indexOf("<@CLIENTID> Dare") == 0){
   });
   console.log("Replied");
 }
-if(msg.content.indexOf("<@CLIENTID> Join") == 0) {
+if(msg.content.indexOf("<@CLIENTID> join") == 0) {
         bot.reply(msg, join);
 }
 
-if(message.content.indexOf("<@CLIENTID> Help") == 0) {
+if(message.content.indexOf("<@CLIENTID> help") == 0) {
         bot.reply(message, help);
 }
 
