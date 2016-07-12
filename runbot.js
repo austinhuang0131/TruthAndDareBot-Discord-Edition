@@ -1,3 +1,13 @@
+/*var request = require('request');
+var zlib = require('zlib');
+
+var url = "https://api.stackexchange.com/2.2/badges?order=desc&sort=rank&site=stackoverflow"
+request({ url: url, headers: {'accept-encoding': 'gzip'}})
+  .pipe(zlib.createGunzip())
+  .pipe(process.stdout);  // not gibberish
+  console.log(response);
+*/
+
 var Discord = require("discord.js")
 var request = require("request")
 var bot = new Discord.Client()
@@ -59,9 +69,6 @@ if(message.content.indexOf("<@CLIENTID> help") == 0) {
         bot.reply(message, help);
 }
 
-mybot.loginWithToken("*TOKEN*", function(error) {
-  if (error) {
-    console.error(error);
-    return;
-  }
 });
+
+bot.loginWithToken("Token");
