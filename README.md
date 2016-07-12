@@ -1,4 +1,4 @@
-# TruthAndDareBot-Discord-Edition https://travis-ci.org/TheRealUnknownDeveloper/TruthAndDareBot-Discord-Edition.svg?branch=master
+# TruthAndDareBot-Discord-Edition [![Build Status](https://travis-ci.org/TheRealUnknownDeveloper/TruthAndDareBot-Discord-Edition.svg?branch=master)](https://travis-ci.org/TheRealUnknownDeveloper/TruthAndDareBot-Discord-Edition)
 A Truth and Dare Bot made by @UnknownDeveloper
 
 #How to run
