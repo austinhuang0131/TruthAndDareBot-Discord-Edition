@@ -12,6 +12,18 @@ var help = "Truth and Dare is a popular game. How it's played is a player asks a
 
 bot.on("ready", function(msg){
   console.log("Woop! Bot logged in under the name of "+bot.user.name+" and the user ID of "+bot.user.id)
+  fs.readFile('index.html', function (err, html) {
+    if (err) {
+        throw err;
+    }
+    http.createServer(function(request, response) {
+        response.writeHeader(200, {"Content-Type": "text/html"});
+        response.write(html);
+        response.write('<h4 id="text2">Connected under the name of: ' + bot.user.name + ' '+ 'and the user id of ' + bot.user.id +  '</h1>');
+        response.end();
+    }).listen(8080, '127.0.0.1');
+    open('http://127.0.0.1:8080')
+});
 })
 
 bot.on("message", function(msg) {
