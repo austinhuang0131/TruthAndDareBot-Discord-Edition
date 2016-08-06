@@ -1,6 +1,7 @@
 
 var Discord = require("discord.js")
 var request = require("request")
+var open = require('open')
 var bot = new Discord.Client()
 
 var truths = "API for Truths";
