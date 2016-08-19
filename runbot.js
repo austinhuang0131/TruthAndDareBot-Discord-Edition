@@ -9,7 +9,7 @@ var dares = "API FOR Dares";
 // To get my API message me on discord and i'll give them to you.
 var join = "To join press this url https://discordapp.com/oauth2/authorize?&client_id=174237165042008075&scope=bot and select your server !"
 var help = "Truth and Dare is a popular game. How it's played is a player asks a Truth or a dare and gets from another person. To play it on the server call the bot with it's username and Truth next to it for Truth and Dare for a dare."
-
+var info = "The TruthAndDareBot is made by @UnknownDeveloper and the API's that power this bot. The bot and the API's are licensed under the MIT License. For More information visit the GitHub page at this page https://github.com/TheRealUnknownDeveloper/TruthAndDareBot-Discord-Edition/"
 
 bot.on("ready", function(msg){
   console.log("Woop! Bot logged in under the name of "+bot.user.name+" and the user ID of "+bot.user.id)
@@ -67,6 +67,10 @@ if(msg.content.indexOf("<@CLIENTID> dare") == 0){
 }
 if(msg.content.indexOf("<@CLIENTID> join") == 0) {
         bot.reply(msg, join);
+}
+
+if(msg.content.indexOf("<@CLIENTID> info") == 0) {
+        bot.reply(msg, info);
 }
 
 if(message.content.indexOf("<@CLIENTID> help") == 0) {
