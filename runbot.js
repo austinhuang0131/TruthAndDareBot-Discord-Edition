@@ -5,6 +5,7 @@ var http = require('http')
 var open = require('open')
 var fs = require('fs')
 var bot = new Discord.Client()
+var token = 'TOKEN HERE '
 
 var truths = "API for Truths";
 var dares = "API FOR Dares";
@@ -81,4 +82,4 @@ if(message.content.indexOf("<@CLIENTID> help") == 0) {
 
 });
 
-bot.loginWithToken("Token");
+bot.loginWithToken(token);
