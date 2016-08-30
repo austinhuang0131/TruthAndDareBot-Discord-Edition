@@ -1,6 +1,7 @@
 
 var Discord = require("discord.js")
 var request = require("request")
+var http = require('http')
 var open = require('open')
 var fs = require('fs')
 var bot = new Discord.Client()
