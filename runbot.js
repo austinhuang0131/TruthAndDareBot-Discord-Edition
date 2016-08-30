@@ -6,7 +6,7 @@ var bot = new Discord.Client()
 
 var truths = "API for Truths";
 var dares = "API FOR Dares";
-// To get my API message me on discord and i'll give them to you.
+// To get my API message me on discord or Reddit and i'll give them to you.
 var join = "To join press this url https://discordapp.com/oauth2/authorize?&client_id=174237165042008075&scope=bot and select your server !"
 var help = "Truth and Dare is a popular game. How it's played is a player asks a Truth or a dare and gets from another person. To play it on the server call the bot with it's username and Truth next to it for Truth and Dare for a dare."
 var info = "The TruthAndDareBot is made by @UnknownDeveloper and the API's that power this bot. The bot and the API's are licensed under the MIT License. For More information visit the GitHub page at this page https://github.com/TheRealUnknownDeveloper/TruthAndDareBot-Discord-Edition/"
