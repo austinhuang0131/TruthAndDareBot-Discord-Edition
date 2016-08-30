@@ -4,5 +4,6 @@ node_js:
 install:
     - npm install discord.js --save
     - npm install open --save
+    - npm install request
 script: node runbot.js   
     
