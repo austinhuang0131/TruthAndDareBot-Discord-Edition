@@ -7,13 +7,13 @@ var bot = new Discord.Client({
 
 var token = 'TOKEN HERE';
 
-var truths = "http://dobij5.com/truths.php";
-var dares = "http://dobij5.com/dares.php";
-// api is not made by UnknownDeveloper
+var truths = "TRUTHS API";
+var dares = "DARES API";
+
 
 var join = "To invite this bot click https://discordapp.com/oauth2/authorize?&client_id=174237165042008075&scope=bot and select your server !"
 var help = "Truth and Dare is a popular game. How it's played is a player asks a Truth or a dare and gets from another person. To play it on the server call the bot with it's username and Truth next to it for Truth and Dare for a dare."
-var info = "The TruthAndDareBot is made by @UnknownDeveloper but he didn't make the API's that power this bot. The bot is licensed under the MIT License. For More information visit the GitHub page at this page https://github.com/TheRealUnknownDeveloper/TruthAndDareBot-Discord-Edition/"
+var info = "The TruthAndDareBot is made by @UnknownDeveloper that power this bot. The bot is licensed under the MIT License. For More information visit the GitHub page at this page https://github.com/TheRealUnknownDeveloper/TruthAndDareBot-Discord-Edition/"
 
 bot.on("ready", function(msg) {
   console.log("Woop! Bot logged in under the name of " + bot.user.name + " and the user ID of " + bot.user.id)
@@ -26,7 +26,7 @@ bot.on("message", function(msg) {
     request(truths, function(error, response, body) {
       // Check for no error and a 200 okay response
       if (!error && response.statusCode == 200) {
-        console.log(body); // Show the HTML for the Google homepage. // no, this is not google
+        console.log(body); 
         // Try to parse the json. If it errors it gets caught.
         var truthjson = JSON.parse(body);
         var randomtruth = truthjson[0]['Truth'];
@@ -42,7 +42,7 @@ bot.on("message", function(msg) {
     request(dares, function(error, response, body) {
       // Check for no error and a 200 okay response
       if (!error && response.statusCode == 200) {
-        console.log(body); // Show the HTML for the Google homepage. // NO IT FUCKING DOESN'T
+        console.log(body); 
         // Try to parse the json. If it errors it gets caught.
         var darejson = JSON.parse(body);
         var randomdare = darejson[0]['Dare'];
