@@ -1,3 +1,5 @@
+[![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com)[![forthebadge](http://forthebadge.com/images/badges/ages-12.svg)](http://forthebadge.com)[![forthebadge](http://forthebadge.com/images/badges/uses-git.svg)](http://forthebadge.com)[![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)[![forthebadge](http://forthebadge.com/images/badges/built-by-hipsters.svg)](http://forthebadge.com)[![forthebadge](http://forthebadge.com/images/badges/powered-by-electricity.svg)](http://forthebadge.com)
+
 # TruthAndDareBot-Discord-Edition [![Build Status](https://travis-ci.org/TheRealUnknownDeveloper/TruthAndDareBot-Discord-Edition.svg?branch=master)](https://travis-ci.org/TheRealUnknownDeveloper/TruthAndDareBot-Discord-Edition)
 A Truth and Dare Bot made by @UnknownDeveloper
 
