@@ -15,11 +15,9 @@ You will see a webpage when it's succesfull telling you information about the bo
 9. When bot is added to find the client id is type \ before mentioning the username and you'll get the id
 10. Replace the id's with the one's in the runbot.js
 
-# Known Bugs
-1. Bot will crash when reconnecting due to the ports being taken when the bot is started.
 
 # If you'd like to help
-You can help by the following: Report issues,errors,suggestions, Help improve the code for the bot or if you'd like to keep it up and running donate using bitcoins at: 1LLGFUnY2kh5n7u3vJXZn43xKpmY1dPh6c
+You can help by the following: Report issues, errors, suggestions, Help improve the code for the bot or if you'd like to keep it up and running donate using bitcoins at: 1LLGFUnY2kh5n7u3vJXZn43xKpmY1dPh6c
 
 # Contact
 @UnknownDeveloper#2068(Discord) & /u/UnknownDeveloper(Reddit)
