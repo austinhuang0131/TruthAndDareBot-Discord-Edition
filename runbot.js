@@ -5,7 +5,9 @@ var bot = new Discord.Client({
   autoReconnect: true
 })
 
-var token = 'TOKEN HERE';
+// var token = 'TOKEN HERE'; 
+var token = process.env['token'];
+
 
 var truths = "TRUTHS API";
 var dares = "DARES API";
