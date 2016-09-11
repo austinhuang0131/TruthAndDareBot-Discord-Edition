@@ -1,4 +1,4 @@
-var Discord = require("discord.js")
+var Discord = require("discord.js@8.1.0")
 var request = require("request")
 var fs = require('fs')
 var bot = new Discord.Client({
